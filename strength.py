@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import subprocess
+import os
 
 # cylinder obj
 class airframe(object):
@@ -76,7 +77,8 @@ class airframe(object):
             plt.plot(self.Rtratio, self.sigmacr_p, 'r')
             plt.xlabel('R/t')
             plt.ylabel('Sigma_cr (psi)')
-            plt.title('Strength of Thin Wall Cylinder under Axial Load (No Internal Pressure)')
+            plt.title('Strength of Thin Wall Cylinder under Axial Load')
+            plt.savefig(os.path.join(os.getcwd(), 'AxialStrengthRt.png'))
             plt.show()
 
 
