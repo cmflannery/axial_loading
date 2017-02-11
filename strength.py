@@ -73,11 +73,12 @@ class airframe(object):
 
     def plot_sigmacr_np_v_tR(self):
         with plt.xkcd():
-            plt.plot(self.Rtratio, self.sigmacr_np, 'b')
-            plt.plot(self.Rtratio, self.sigmacr_p, 'r')
+            plt.plot(self.Rtratio, self.sigmacr_np, 'b', label='unpressurized')
+            plt.plot(self.Rtratio, self.sigmacr_p, 'r', label='pressureized')
             plt.xlabel('R/t')
             plt.ylabel('Sigma_cr (psi)')
             plt.title('Strength of Thin Wall Cylinder under Axial Load')
+            plt.legend(loc='upper right')
             plt.savefig(os.path.join(os.getcwd(), 'AxialStrengthRt.png'))
             plt.show()
 
