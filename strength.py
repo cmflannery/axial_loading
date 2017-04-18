@@ -90,11 +90,12 @@ if __name__ == "__main__":
         subprocess.call('cls', shell=True)
 
     LaunchySLV = airframe()
-    print 'pbar',
-    print LaunchySLV.pbar
-    print 'sigma_np',
-    print LaunchySLV.sigmacr_np
-    print 'sigma_p',
-    print LaunchySLV.sigmacr_p
+    # print 'pbar',
+    # print LaunchySLV.pbar
+    # print 'sigma_np',
+    # print LaunchySLV.sigmacr_np
+    # print 'sigma_p',
+    # print LaunchySLV.sigmacr_p
 
+    print('hello')
     LaunchySLV.plot_sigmacr_np_v_tR()
